@@ -1,0 +1,9 @@
+{
+  "name": "example-checkout-address-autocomplete-js",
+  "private": true,
+  "version": "1.0.0",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@shopify/ui-extensions": "2024.4.x"
+  }
+}
