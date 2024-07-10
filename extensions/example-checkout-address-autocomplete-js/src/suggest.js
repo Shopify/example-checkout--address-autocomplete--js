@@ -5,12 +5,7 @@ export default extension(
   async ({ signal, target }) => {
     const { field, value } = target;
 
-    const response = await fetch(
-      `https://hheyhhay.github.io/address-autocomplete/address-autocomplete.json?query=${value}&field=${signal}`,
-      {
-        signal,
-      }
-    );
+    const response = await fetchSuggestions(field, value, signal);
 
     const { result } = await response.json();
 
@@ -26,3 +21,17 @@ export default extension(
     return { suggestions };
   }
 );
+
+/**
+ * In this example, suggestions are fetched from a static file. In your implementation,
+ * use the address field and its current query value to fetch meaningful address suggestions.
+ */
+async function fetchSuggestions(_field, _value, signal) {
+  return fetch(
+    `https://shopify.github.io/address-autocomplete/address-autocomplete.json`,
+    {
+      // Pass `signal` to each fetch request
+      signal,
+    }
+  );
+}
