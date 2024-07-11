@@ -1,7 +1,10 @@
 import { extension } from "@shopify/ui-extensions/checkout";
 
+// [START address-autocomplete.ext-target]
+// [START address-autocomplete.extension]
 export default extension(
   "purchase.address-autocomplete.suggest",
+
   async ({ signal, target }) => {
     const { field, value } = target;
 
@@ -21,6 +24,7 @@ export default extension(
     return { suggestions };
   }
 );
+// [END address-autocomplete.ext-target]
 
 /**
  * In this example, suggestions are fetched from a static file. In your implementation,
@@ -35,3 +39,4 @@ async function fetchSuggestions(_field, _value, signal) {
     }
   );
 }
+// [END address-autocomplete.extension]
