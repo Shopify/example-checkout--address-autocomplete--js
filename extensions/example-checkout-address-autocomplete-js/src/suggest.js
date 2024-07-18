@@ -4,14 +4,15 @@ import { extension } from "@shopify/ui-extensions/checkout";
 // [START address-autocomplete.extension]
 export default extension(
   "purchase.address-autocomplete.suggest",
-
+// [END address-autocomplete.ext-target]
+// [START address-autocomplete.attributes]
   async ({ signal, target }) => {
     const { field, value } = target;
-
+// [END address-autocomplete.attributes]
     const response = await fetchSuggestions(field, value, signal);
 
     const { result } = await response.json();
-
+// [START address-autocomplete.suggestions]
     const suggestions = result.suggestions.map((suggestion) => {
       return {
         id: suggestion.global_address_key,
@@ -22,9 +23,9 @@ export default extension(
     });
 
     return { suggestions };
+// [END address-autocomplete.suggestions]
   }
 );
-// [END address-autocomplete.ext-target]
 
 /**
  * In this example, suggestions are fetched from a static file. In your implementation,
