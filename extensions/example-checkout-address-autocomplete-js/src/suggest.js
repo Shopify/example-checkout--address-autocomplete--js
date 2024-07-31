@@ -7,7 +7,7 @@ export default extension(
 // [END address-autocomplete.ext-target]
 // [START address-autocomplete.attributes]
   async ({ signal, target }) => {
-    const { field, value } = target;
+    const { field, value, selectedCountryCode } = target;
 // [END address-autocomplete.attributes]
 
 // [START address-autocomplete.fetch]
