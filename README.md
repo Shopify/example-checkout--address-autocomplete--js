@@ -2,8 +2,7 @@
 
 This repo contains an example app that uses [checkout UI extensions](https://shopify.dev/docs/api/checkout-ui-extensions) to Build a custom address autocomplete provider using JavaScript.
 
-For more information, and for a walkthrough of this code, review our tutorial: [Build a custom address autocomplete provider](https://shopify.dev/docs/apps/checkout/address-autocomplete)
-/*TODO: update url**/
+For more information, and for a walkthrough of this code, review our tutorial: [Build a custom address autocomplete provider]([https://shopify.dev/docs/apps/checkout/address-autocomplete](https://shopify.dev/docs/apps/build/checkout/address-autocomplete?extension=javascript))
 
 ## Running this app
 
